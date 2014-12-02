@@ -1,0 +1,18 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+
+<%= link_to "Home", home_path %>
+<%= link_to "About", about_path %>
+<span class="links">
+	<%= link_to "Contact", contact_path, remote: true %>
+	<%= link_to "Support", support_path, remote: true %>
+</span>
+
+<div id="ajax_div"></div>
+
+<script>
+ $(".links a").click(function () {
+    history.pushState(null, '', this.href);
+  });
+</script>
