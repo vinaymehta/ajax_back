@@ -18,7 +18,6 @@
 $(function () {
 // Other functions omitted.
   $(window).bind("popstate", function () {
-  	alert("hi")
     $.getScript(location.href);
   });
 });
